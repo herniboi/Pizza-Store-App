@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thisduts.CurrOrderController">
+   <top>
+      <VBox alignment="CENTER" prefHeight="93.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Pizza Order">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="31.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="600.0">
+               <children>
+                  <Label text="Phone Number : " />
+                  <TextField fx:id="phoneNumber" editable="false" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <VBox prefHeight="96.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="600.0">
+               <children>
+                  <Label text="Subtotal $">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="subTotal" editable="false">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label text="Sales Tax $" />
+                  <TextField fx:id="salesTax" editable="false">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="116.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#removePizza" text="Remove Pizza" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0">
+               <children>
+                  <Label text="Order Total $">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="orderTotal" editable="false" prefHeight="26.0" prefWidth="355.0" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="150.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#placeOrder" text="Place Order">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+   <center>
+      <HBox alignment="CENTER" prefHeight="441.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ListView fx:id="pizzaList" prefHeight="210.0" prefWidth="570.0" />
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

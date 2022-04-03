@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="653.0" prefWidth="426.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thisduts.MenuController">
+   <left>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="deluxe" mnemonicParsing="false" onAction="#openPizza">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pics/deluxe.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Button>
+            <Label text="Order Deluxe">
+               <VBox.margin>
+                  <Insets left="65.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="hawaiian" mnemonicParsing="false" onAction="#openPizza">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pics/hawaiian.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets left="5.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Label text="Order Hawaiin">
+               <VBox.margin>
+                  <Insets left="65.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="pepperoni" mnemonicParsing="false" onAction="#openPizza">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pics/pepperoni.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets left="5.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Label text="Order Pepperoni">
+               <VBox.margin>
+                  <Insets left="55.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets top="25.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <right>
+      <VBox prefWidth="203.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#placeOrder">
+               <graphic>
+                  <ImageView fitHeight="129.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pics/shopping%20cart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+            </Button>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="View Order">
+               <VBox.margin>
+                  <Insets left="67.0" />
+               </VBox.margin>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#checkOrders">
+               <graphic>
+                  <ImageView fitHeight="99.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pics/store.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets right="10.0" top="30.0" />
+               </VBox.margin>
+            </Button>
+            <Label text="Store Orders">
+               <VBox.margin>
+                  <Insets left="70.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets top="125.0" />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+   <top>
+      <BorderPane prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <Label text="RU'S DOMINOS" textFill="RED" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Verdana Bold" size="38.0" />
+               </font>
+            </Label>
+         </top>
+         <center>
+            <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Phone Number:">
+                     <HBox.margin>
+                        <Insets top="3.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="phoneNumber" onAction="#createOrder">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </HBox>
+         </center>
+      </BorderPane>
+   </top>
+</BorderPane>
